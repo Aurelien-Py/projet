@@ -8,3 +8,4 @@ deploy:
   app:  guarded-tundra-95985
   on:
     repo: Aurelien-Py/projet
+  run: "rake db:migrate"
