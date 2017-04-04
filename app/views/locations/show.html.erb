@@ -16,15 +16,11 @@
 </p>
 <p>
   <strong>Current weather :</strong>
-  <% if @weatherIconSummary %>
-    <i class="wi wi-forecast-io-<%= @weatherIconSummary %>"></i>
-  <% else %>
-    Unavailable
-  <% end %>
+  <%= @weatherSummary %>
 </p>
 <p>
     <strong>Today temperature :</strong>
-    <%= '%.2f' % @weatherTemperature %> &deg;C
+    <%= @weatherTemperature %> &deg;C
 </p>
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
