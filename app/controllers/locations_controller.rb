@@ -21,10 +21,8 @@ class LocationsController < ApplicationController
             weatherok = true
           end
           if todayForecast.temperature
-            weather_io = toCelsus(todayForecast.temperature)
-            @weatherTemperature = weather_io.round(2);
-            temperature = true
-            
+            @weatherTemperature = toCelsus(todayForecast.temperature)
+            temperatureOk = true 
           end
         end
       end
