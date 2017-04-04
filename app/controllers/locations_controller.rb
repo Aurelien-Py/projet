@@ -12,7 +12,7 @@ class LocationsController < ApplicationController
   def show 
       forecast = ForecastIO.forecast(@location.latitude, @location.longitude)
       weatherOk = false
-      temperatureok = false
+      temperatureOkk = false
       if forecast
         todayForecast = forecast.currently
         if todayForecast
