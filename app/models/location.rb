@@ -1,6 +1,10 @@
 class Location < ActiveRecord::Base
   before_validation :geocode
   
+  def meteo 
+    ForecastIO.forecast(self.latitude,self.longitude ).currently
+  end
+    
   private
   def geocode
     places = Nominatim.search(self.ville).limit(1)
